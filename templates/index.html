@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your NFL Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .info-box {
+            background-color: #e9f5ff; /* A subtle blue background */
+            border: 1px solid #b8daff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        form label {
+            display: block;
+            text-align: center;
+            margin-bottom: 10px; /* Some spacing below the label */
+        }
+        form div {
+            display: flex;
+            justify-content: center;  /* Horizontally centers the button */
+            margin-top: 10px;         /* Some spacing above the button */
+        }       
+
+        h1 {
+            color: #007BFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-box">
+        This application uses a super advanced machine learning algorithm to detect your NFL fandom based on your name. It is 100% accurate.
+    </div>
+    <form action="/submit" method="post">
+        <label for="input_name">Please enter your name</label>
+        <input type="text" id="input_name" name="input_name" required>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <h1>{% block content %}{% endblock %}</h1>
+</body>
+
+</html>
