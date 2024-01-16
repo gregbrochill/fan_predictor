@@ -1,0 +1,1 @@
+This is a simple Flask application that accepts a person's name as input, generates a hash of the name, converts the hash into an integer, performs a modulus operation on the integer, and then assigns a team based on the resulting number.
